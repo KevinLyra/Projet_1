@@ -1,0 +1,57 @@
+h1 {
+    color: #0099ff;
+    border: solid 1px grey;
+    text-align: center;
+    width: 30%;
+    height: 5%;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 1em;
+}
+
+#text{
+    color: #0099ff;
+    border: solid 1px grey;
+    text-align: center;
+    width: 30%;
+    overflow: hidden;
+    margin: 0 auto;
+    color: #00cc99;
+}
+
+#author{
+    text-align: left;
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+#button{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cssbutton{
+    margin: 5px;
+}
+
+#text_insert{
+    
+    color: #00cc99;
+    text-align: center;
+    width: 30%;
+    margin: 0 auto;
+}
+
+textarea{
+    margin-top: 1em;
+    width: 100%;
+    height: 500px;
+}
+
+#insert{
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: end;
+}

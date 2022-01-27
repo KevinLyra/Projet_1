@@ -24,7 +24,7 @@
             $row1 = $resultat->fetch_all(MYSQLI_ASSOC);
             
             foreach( $row1 as $row2){ 
-                $id_artcile = $row2['id'];
+                $id_article = $row2['id'];
         ?>
 
             <h1><?php echo $row2['title']; ?></h1>
@@ -38,7 +38,7 @@
                     </div>
                     
                     <div>
-                        <button class="cssbutton" onclick="window.location.href = 'article.php';">Voir</button><button class="cssbutton">Supprimer</button>
+                        <button class="cssbutton" onclick="window.location.href = 'article.php?id=<?=$id_article?>';">Voir</button><button class="cssbutton">Supprimer</button>
                     </div>
                 </div>
             </div>

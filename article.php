@@ -13,39 +13,36 @@
     </head>
     <body> 
     <?php
+
+            $id_article = $_GET['id'];
             // lancement de la requete
-            $requete = "SELECT * FROM articles WHERE id = 0";
+            $requete = "SELECT * FROM articles WHERE id = $id_article";
 		
-            $resultat = $bdd->query("SELECT * FROM articles WHERE id = 0");
+            $resultat = $bdd->query($requete);
             
-            $row1 = $resultat->fetch_all(MYSQLI_ASSOC);
-            
-            foreach( $row1 as $row2){ 
+            $row1 = $resultat->fetch_assoc();
+
         ?>
 
-            <h1><?php echo $row2['title']; ?></h1>
+            <h1><?php echo $row1['title']; ?></h1>
 
             <div id="text">
 
-                <p> <?php echo $row2['article'];?>
+                <p> <?php echo $row1['article'];?>
                 <div id="button">
                     <div>
                         <button class="cssbutton" onclick="window.location.href = 'index.php';">Retour</button>
                     </div>
                     
                     <div>
-                        <button class="cssbutton" onclick="window.location.href = 'article.php';">Voir</button><button class="cssbutton">Supprimer</button>
+                        <button class="cssbutton" onclick="window.location.href = 'update.php?id=<?=$id_article?>';">Editer</button><button class="cssbutton">Supprimer</button>
                     </div>
                 </div>
             </div>
             
             <div id="author">
-                <?php echo $row2['date']; echo" - ";  echo $row2['author']; ?>
+                <?php echo $row1['date']; echo" - ";  echo $row1['author']; ?>
             </div>
-  <?php     
-  }//fermeture du foreach
 
-$bdd->close();
-?>
     </body>
 </html>
